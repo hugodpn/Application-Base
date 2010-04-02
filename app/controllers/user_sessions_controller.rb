@@ -1,5 +1,7 @@
 class UserSessionsController < ApplicationController
 
+  skip_before_filter :require_authentification, :only => [:new, :create]
+
   def new
     @user_session = UserSession.new
   end
@@ -15,6 +17,10 @@ class UserSessionsController < ApplicationController
   end
 
   def destroy
+    unless current_user
+      redirect_to root_url
+      return
+    end
     @user_session = UserSession.find
     @user_session.destroy
     flash[:notice] = "Successfully logged out."

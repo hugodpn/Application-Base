@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+#  skip_before_filter :require_authentification, :only => [:new, :create]
+
   def new
     @user = User.new
   end
@@ -25,6 +27,14 @@ class UsersController < ApplicationController
       redirect_to root_url
     else
       render :action => 'edit'
+    end
+  end
+
+  def index
+    if current_user.has_perm?("listing_users")
+      @users = User.all
+    else
+      permission_deny
     end
   end
 

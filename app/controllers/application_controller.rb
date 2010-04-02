@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  filter_parameter_logging :password, :password_confirmation
+  before_filter :require_authentification
 
   helper_method :current_user
 
@@ -18,6 +20,18 @@ class ApplicationController < ActionController::Base
 
   def current_user
     @current_user = current_user_session && current_user_session.record
+  end
+  
+  def require_authentification
+    unless current_user
+      flash[:notice] = "You should be loggin."
+      redirect_to "/login"
+    end
+  end
+
+  def permission_deny
+    flash[:notice] = "Permissions deny."
+    redirect_to root_url
   end
 
 end
