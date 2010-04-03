@@ -25,6 +25,12 @@ class CreateUsers < ActiveRecord::Migration
       :login=>"admin", :email=>"admin@dhpn.com")
     admin_usr.is_admin = true
     admin_usr.save
+
+    usr = User.create(:password_confirmation=>"useruser", :password=>"useruser",
+      :login=>"user", :email=>"user@dhpn.com")
+    usr.is_admin = false
+    usr.save
+
   end
 
   def self.down

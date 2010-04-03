@@ -1,7 +1,35 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+admin:
+  id: 1
+  login: admin
+  email: admin@dhpn.com
+  crypted_password: bd428be559a161c11abb50ff8f368151c1273888b16fc2f3f877fdbb8fe14995920b6e6af0023a85fbceef17b7d3a599e9e70f2edb4eafed353d6379326c7d7c
+  password_salt: ePydCQpzEH0yYOwEhqP7
+  persistence_token: c446d1b9ab0e9c1813cadf22f30f56feb0eddd9fd210a754bc4993e63daf3e0741e811653d64442a0fe0ad90d3d3f60292e4d745b8407ddef7fcc2b02b944da0
+  login_count: 0
+  failed_login_count: 0
+  last_request_at: nil
+  current_login_at: nil
+  last_login_at: nil
+  current_login_ip: nil
+  last_login_ip: nil
+  is_admin: true
+  created_at: 2010-04-03 15:53:23
+  updated_at: 2010-04-03 15:53:23
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+user:
+  id: 2
+  login: user
+  email: user@dhpn.com
+  crypted_password: 60a7cc2d5ab1ccefa3fe507ee9c7eb45ee026ab8402f1a51d9974da86c3e48eb2b3e358fd9450c80f49bd11d9e4653d0c569bf34a202b1896b37a9f9ff41c3ec
+  password_salt: po6rx-BfC92LrZWNJeeZ
+  persistence_token: 746f9b1b96e1a9d21934c2a8a6ca829e153bf08e0714a131dbe9ab6f27db0f8171fffcf890439ba4dc061a2416d25135ae8b0fa576691f67872da8ec1c2db326
+  login_count: 0
+  failed_login_count: 0
+  last_request_at: nil
+  current_login_at: nil
+  last_login_at: nil
+  current_login_ip: nil
+  last_login_ip: nil
+  is_admin: false
+  created_at: 2010-04-03 15:53:23
+  updated_at: 2010-04-03 15:53:23
