@@ -80,7 +80,7 @@ class Admin::ArticlesController < ApplicationController
     @article.destroy
 
     respond_to do |format|
-      format.html { redirect_to([:admin, articles_url]) }
+      format.html { redirect_to(admin_articles_url) }
       format.xml  { head :ok }
     end
   end
