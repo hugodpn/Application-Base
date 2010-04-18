@@ -6,6 +6,13 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :user_sessions
   map.resources :users
 
+
+  map.namespace :admin do |admin|
+    admin.resources :articles
+    admin.resources :users
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

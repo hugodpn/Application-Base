@@ -34,4 +34,10 @@ class ApplicationController < ActionController::Base
     redirect_to root_url
   end
 
+  def validate_permission permission="other"
+    unless current_user and  current_user.has_perm?(permission)
+      permission_deny
+    end
+  end
+
 end

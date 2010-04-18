@@ -30,12 +30,4 @@ class UsersController < ApplicationController
     end
   end
 
-  def index
-    if current_user.has_perm?("listing_users")
-      @users = User.all
-    else
-      permission_deny
-    end
-  end
-
 end
