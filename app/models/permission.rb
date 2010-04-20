@@ -15,5 +15,28 @@ class Permission < ActiveRecord::Base
   def to_hash
     self.new_record? ? {} : {self.action => self.granted}
   end
-  
+
+
+  PERMISSIONS = {
+    :model => {
+      :general => {
+        :title => "Show model general something...",
+        :columns => ["show", "edit", "create"],
+        :rows => ["uno", "dos", "tres"]
+      },
+      :general_two => {
+        :title => "Show model general_two something...",
+        :columns => ["edit", "create"],
+        :rows => ["uno", "dos", "tres"]
+      }
+    }, # "model_general_show_uno"
+    :model_two => {
+      :general => {
+        :title => "Show model_two general something...",
+        :columns => ["show", "edit", "create"],
+        :rows => ["uno", "dos", "tres"]
+      }
+    }
+  }
+
 end
