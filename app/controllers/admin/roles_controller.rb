@@ -65,5 +65,25 @@ class Admin::RolesController < ApplicationController
       end
     end
   end
+
+
+  def save_permissions
+
+    @role = Role.find(params[:form][:role_id])
+
+    params[:permission].each do |perm, value|
+
+      if @role.permissions.map(&:action).include?(perm)
+        p = @role.permissions.find_by_action(perm)
+        p.granted = (value=="G")?true:(value=="D")?false:nil
+        p.save
+      else
+        @role.permissions << Permission.new(:action => perm, :granted => (value=="G")?true:(value=="D")?false:nil) if value != ""
+      end
+
+    end
+
+    @role.save
+  end
   
 end
