@@ -1,0 +1,19 @@
+
+#header_panel{
+    border: 1px solid;
+}
+
+#left_panel{
+    float: left;
+    height: 100%;
+}
+
+#right_panel{
+    float: right;
+    height: 100%;
+}
+
+#content_panel{
+    padding-left: 180px;
+    padding-right: 130px;
+}
