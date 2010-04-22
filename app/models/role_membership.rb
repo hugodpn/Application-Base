@@ -1,3 +1,16 @@
+# == Schema Information
+# Schema version: 20100418035017
+#
+# Table name: role_memberships
+#
+#  id            :integer         not null, primary key
+#  roleable_id   :integer
+#  roleable_type :string(255)
+#  role_id       :integer
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
 class RoleMembership < ActiveRecord::Base
   #belongs_to :user
   belongs_to :role

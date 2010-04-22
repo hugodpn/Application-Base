@@ -1,3 +1,17 @@
+# == Schema Information
+# Schema version: 20100418035017
+#
+# Table name: permissions
+#
+#  id               :integer         not null, primary key
+#  permissible_id   :integer
+#  permissible_type :string(255)
+#  action           :string(255)
+#  granted          :boolean
+#  created_at       :datetime
+#  updated_at       :datetime
+#
+
 class Permission < ActiveRecord::Base
   # uncomment any of the following lines which is relevant to your application,
   # or create your own with the name of the model which acts_as_permissible.
