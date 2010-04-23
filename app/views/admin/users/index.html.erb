@@ -7,9 +7,16 @@
     <tr>
       <td><%= user.login %></td>
       <td><%= user.email %></td>
+      <td><%= user.is_enabled %></td>
+      <td><%= user.is_admin %></td>
       <td><%= link_to 'Show', [:admin, user] %></td>
       <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
       <td><%= link_to 'Destroy', [:admin, user], :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
+
+<br />
+
+<%= link_to 'New user', new_admin_user_path %>
+

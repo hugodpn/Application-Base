@@ -17,19 +17,22 @@ class CreateUsers < ActiveRecord::Migration
       t.string    :last_login_ip  
 
       t.boolean   :is_admin, :default => false
+      t.boolean   :is_enabled, :default => false
       t.timestamps
     end
 
 
     admin_usr = User.create(:password_confirmation=>"adminadmin", :password=>"adminadmin",
-      :login=>"admin", :email=>"admin@dhpn.com")
-    admin_usr.is_admin = true
+      :login=>"admin", :email=>"admin@dhpn.com", :is_enabled => true, :is_admin => true)
     admin_usr.save
 
     usr = User.create(:password_confirmation=>"useruser", :password=>"useruser",
-      :login=>"user", :email=>"user@dhpn.com")
-    usr.is_admin = false
+      :login=>"user", :email=>"user@dhpn.com", :is_enabled => true)
     usr.save
+
+    usr2 = User.create(:password_confirmation=>"useruser", :password=>"useruser",
+      :login=>"user2", :email=>"user2@dhpn.com", :is_enabled => false)
+    usr2.save
 
   end
 

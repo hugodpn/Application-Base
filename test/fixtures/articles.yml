@@ -13,9 +13,21 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  title: MyString
-  body: MyText
+  id: 1
+  title: Article one
+  body: This is the first article..
 
 two:
-  title: MyString
-  body: MyText
+  id: 2
+  title: Article title 2
+  body: Article body 2..
+
+three:
+  id: 3
+  title: Article title 3
+  body: Article body 3..
+
+four:
+  id: 4
+  title: Article title 4
+  body: Article body 4..

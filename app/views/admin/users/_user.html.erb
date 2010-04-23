@@ -1,0 +1,31 @@
+<% form_for([:admin, @user]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :login, "Username" %><br />
+    <%= f.text_field :login %>
+  </p>
+  <p>
+    <%= f.label :email, "Email" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password, "Password" %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Password confirmation" %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.label :is_admin %><br />
+    <%= f.check_box :is_admin %>
+  </p>
+  <p>
+    <%= f.label :is_enabled %><br />
+    <%= f.check_box :is_enabled %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>

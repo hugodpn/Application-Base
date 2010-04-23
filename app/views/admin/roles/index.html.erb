@@ -8,7 +8,7 @@
       <td><%= role.name %></td>
       <td><%= role.roles %></td>
       <td><%= link_to 'Show', [:admin, role] %></td>
-      <td><%= link_to 'Edit', edit_admin_role_path(role) %></td>
+      <td><%= link_to 'Edit', '/admin/roles/' + role.id.to_s + '/edit?model=' + Permission::PERMISSIONS.first.first.to_s %></td>
       <td><%= link_to 'Destroy', [:admin, role], :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
