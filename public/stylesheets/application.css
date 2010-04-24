@@ -1,6 +1,5 @@
 
 #header_panel{
-    border: 1px solid;
 }
 
 #left_panel{
@@ -16,4 +15,15 @@
 #content_panel{
     padding-left: 180px;
     padding-right: 130px;
+}
+
+table.normal_table{
+    border: 1px solid;
+}
+table.normal_table td{
+    border: 1px solid;
+}
+
+table.normal_table th{
+    background-color: silver;
 }
