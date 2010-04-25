@@ -11,8 +11,8 @@
 
 one:
   id: 1
-  name: role 1
+  name: editor
 
 two:
   id: 2
-  name: role 2
+  name: administrator

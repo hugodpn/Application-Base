@@ -9,8 +9,6 @@ Model:
   <%= render :partial => "save_message", :object => @saved_message %>
 </div>
 
-
-
 <% if params[:model] %>
   <div id="form_permissions">
     <%= hidden_field "form", "role_id", :size => 5, :value => @role.id %>
@@ -18,6 +16,7 @@ Model:
 
     <% Permission::PERMISSIONS[(params[:model]).to_sym].each do |table, other| %>
       <p>
+      <h2><%= Permission::PERMISSIONS[(params[:model]).to_sym][table.to_sym][:title] %></h2>
       <table>
         <th><%= table %></th>
         <% Permission::PERMISSIONS[(params[:model]).to_sym][table.to_sym][:columns].each do |col| %>

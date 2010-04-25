@@ -31,24 +31,42 @@ class Permission < ActiveRecord::Base
   end
 
 
+#  PERMISSIONS = {
+#    :model => {
+#      :general => {
+#        :title => "Show model general something...",
+#        :columns => ["show", "edit", "create"],
+#        :rows => ["uno", "dos", "tres"]
+#      },
+#      :general_two => {
+#        :title => "Show model general_two something...",
+#        :columns => ["edit", "create"],
+#        :rows => ["uno", "dos", "tres"]
+#      }
+#    }, # "model_general_show_uno"
+#    :model_two => {
+#      :general => {
+#        :title => "Show model_two general something...",
+#        :columns => ["show", "edit", "create"],
+#        :rows => ["uno", "dos", "tres"]
+#      }
+#    }
+#  }
+
+
   PERMISSIONS = {
-    :model => {
-      :general => {
-        :title => "Show model general something...",
-        :columns => ["show", "edit", "create"],
-        :rows => ["uno", "dos", "tres"]
-      },
-      :general_two => {
-        :title => "Show model general_two something...",
-        :columns => ["edit", "create"],
-        :rows => ["uno", "dos", "tres"]
+    :articles => {
+      :article => {
+        :title => "Articles Permissions",
+        :columns => ["can"],
+        :rows => ["listing", "view", "update", "create", "destroy"]
       }
-    }, # "model_general_show_uno"
-    :model_two => {
-      :general => {
-        :title => "Show model_two general something...",
-        :columns => ["show", "edit", "create"],
-        :rows => ["uno", "dos", "tres"]
+    }, 
+    :users => {
+      :user => {
+        :title => "Users Permissions",
+        :columns => ["can"],
+        :rows => ["listing", "view", "update", "create", "destroy"]
       }
     }
   }

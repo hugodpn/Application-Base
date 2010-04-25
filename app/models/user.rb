@@ -29,6 +29,8 @@ class User < ActiveRecord::Base
   def has_perm? perm="generic"
     if self.is_admin and self.login == "admin"
       return true
+    else
+      self.has_permission?(perm)
     end
   end
 
