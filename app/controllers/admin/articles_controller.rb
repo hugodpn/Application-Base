@@ -3,7 +3,7 @@ class Admin::ArticlesController < ApplicationController
   # GET /admin/articles
   # GET /admin/articles.xml
   def index
-    unless current_user.has_perm?("articles_article_can_listing")
+    unless current_user.has_perm?("articles_article_can_list")
       permission_deny
     else
       @articles = Article.all
@@ -18,7 +18,7 @@ class Admin::ArticlesController < ApplicationController
   # GET /admin/articles/1
   # GET /admin/articles/1.xml
   def show
-    unless current_user.has_perm?("articles_article_can_view")
+    unless current_user.has_perm?("articles_article_can_show")
       permission_deny 
     else
       @article = Article.find(params[:id])

@@ -59,14 +59,21 @@ class Permission < ActiveRecord::Base
       :article => {
         :title => "Articles Permissions",
         :columns => ["can"],
-        :rows => ["listing", "view", "update", "create", "destroy"]
+        :rows => ["list", "show", "update", "create", "destroy"]
       }
     }, 
     :users => {
       :user => {
         :title => "Users Permissions",
         :columns => ["can"],
-        :rows => ["listing", "view", "update", "create", "destroy"]
+        :rows => ["list", "show", "update", "create", "destroy"]
+      }
+    },
+    :roles => {
+      :role => {
+        :title => "Roles Permissions",
+        :columns => ["can"],
+        :rows => ["list", "show", "update", "create", "destroy"]
       }
     }
   }

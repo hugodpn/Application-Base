@@ -1,67 +1,95 @@
 class Admin::RolesController < ApplicationController
 
   def index
-    @roles = Role.find(:all)
+    unless current_user.has_perm?("roles_role_can_list")
+      permission_deny
+    else
+      @roles = Role.find(:all)
+    end
   end
 
   def new
-    @role = Role.new
+    unless current_user.has_perm?("roles_role_can_create")
+      permission_deny
+    else
+      @role = Role.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @role }
+      respond_to do |format|
+        format.html # new.html.erb
+        format.xml  { render :xml => @role }
+      end
     end
   end
 
   def create
-    @role = Role.new(params[:role])
+    unless current_user.has_perm?("roles_role_can_create")
+      permission_deny
+    else
+      @role = Role.new(params[:role])
 
-    respond_to do |format|
-      if @role.save
-        flash[:notice] = 'Role was successfully created.'
-        format.html { redirect_to([:admin, @role]) }
-        format.xml  { render :xml => @role, :status => :created, :location => @role }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @role.errors, :status => :unprocessable_entity }
+      respond_to do |format|
+        if @role.save
+          flash[:notice] = 'Role was successfully created.'
+          format.html { redirect_to([:admin, @role]) }
+          format.xml  { render :xml => @role, :status => :created, :location => @role }
+        else
+          format.html { render :action => "new" }
+          format.xml  { render :xml => @role.errors, :status => :unprocessable_entity }
+        end
       end
     end
   end
 
   def show
-    @role = Role.find(params[:id])
+    unless current_user.has_perm?("roles_role_can_show")
+      permission_deny
+    else
+      @role = Role.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @role }
+      respond_to do |format|
+        format.html # show.html.erb
+        format.xml  { render :xml => @role }
+      end
     end
   end
 
   def destroy
-    @role = Role.find(params[:id])
-    @role.destroy
+    unless current_user.has_perm?("roles_role_can_destroy")
+      permission_deny
+    else
+      @role = Role.find(params[:id])
+      @role.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(admin_roles_path) }
-      format.xml  { head :ok }
+      respond_to do |format|
+        format.html { redirect_to(admin_roles_path) }
+        format.xml  { head :ok }
+      end
     end
   end
 
   def edit
-    @role = Role.find(params[:id])
+    unless current_user.has_perm?("roles_role_can_update")
+      permission_deny
+    else
+      @role = Role.find(params[:id])
+    end
   end
 
   def update
-    @role = Role.find(params[:id])
+    unless current_user.has_perm?("roles_role_can_update")
+      permission_deny
+    else
+      @role = Role.find(params[:id])
 
-    respond_to do |format|
-      if @role.update_attributes(params[:role])
-        flash[:notice] = 'Role was successfully updated.'
-        format.html { redirect_to([:admin, @role]) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @role.errors, :status => :unprocessable_entity }
+      respond_to do |format|
+        if @role.update_attributes(params[:role])
+          flash[:notice] = 'Role was successfully updated.'
+          format.html { redirect_to([:admin, @role]) }
+          format.xml  { head :ok }
+        else
+          format.html { render :action => "edit" }
+          format.xml  { render :xml => @role.errors, :status => :unprocessable_entity }
+        end
       end
     end
   end

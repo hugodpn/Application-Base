@@ -1,72 +1,99 @@
 class Admin::UsersController < ApplicationController
 
   def index
-    permission_deny unless current_user.has_perm?("listing_users")
-    @users = User.all
+    unless current_user.has_perm?("users_user_can_list")
+      permission_deny
+    else
+      @users = User.all
+    end
   end
 
   def show
-    @user = User.find(params[:id])
+    unless current_user.has_perm?("users_user_can_show")
+      permission_deny
+    else
+      @user = User.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @article }
+      respond_to do |format|
+        format.html # show.html.erb
+        format.xml  { render :xml => @article }
+      end
     end
   end
 
   def edit
-    @user = User.find(params[:id])
-    @roles = Role.find(:all)
+    unless current_user.has_perm?("users_user_can_update")
+      permission_deny
+    else
+      @user = User.find(params[:id])
+      @roles = Role.find(:all)
+    end
   end
 
   def update
-    params[:user][:role_ids] ||= []
-    @user = User.find(params[:id])
+    unless current_user.has_perm?("users_user_can_update")
+      permission_deny
+    else
+      params[:user][:role_ids] ||= []
+      @user = User.find(params[:id])
 
-    respond_to do |format|
-      if @user.update_attributes(params[:user])
-        flash[:notice] = 'User was successfully updated.'
-        format.html { redirect_to([:admin, @user]) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+      respond_to do |format|
+        if @user.update_attributes(params[:user])
+          flash[:notice] = 'User was successfully updated.'
+          format.html { redirect_to([:admin, @user]) }
+          format.xml  { head :ok }
+        else
+          format.html { render :action => "edit" }
+          format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+        end
       end
     end
   end
 
   def new
-    @user = User.new
-    @roles = Role.find(:all)
+    unless current_user.has_perm?("users_user_can_create")
+      permission_deny
+    else
+      @user = User.new
+      @roles = Role.find(:all)
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @user }
+      respond_to do |format|
+        format.html # new.html.erb
+        format.xml  { render :xml => @user }
+      end
     end
   end
 
   def create
-    @user = User.new(params[:user])
+    unless current_user.has_perm?("users_user_can_create")
+      permission_deny
+    else
+      @user = User.new(params[:user])
 
-    respond_to do |format|
-      if @user.save
-        flash[:notice] = 'User was successfully created.'
-        format.html { redirect_to([:admin, @user]) }
-        format.xml  { render :xml => @user, :status => :created, :location => @user }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+      respond_to do |format|
+        if @user.save
+          flash[:notice] = 'User was successfully created.'
+          format.html { redirect_to([:admin, @user]) }
+          format.xml  { render :xml => @user, :status => :created, :location => @user }
+        else
+          format.html { render :action => "new" }
+          format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+        end
       end
     end
   end
 
   def destroy
-    @user = User.find(params[:id])
-    @user.destroy
+    unless current_user.has_perm?("users_user_can_destroy")
+      permission_deny
+    else
+      @user = User.find(params[:id])
+      @user.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(admin_users_url) }
-      format.xml  { head :ok }
+      respond_to do |format|
+        format.html { redirect_to(admin_users_url) }
+        format.xml  { head :ok }
+      end
     end
   end
   
