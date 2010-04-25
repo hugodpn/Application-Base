@@ -2,7 +2,13 @@ Model:
 <% Permission::PERMISSIONS.each do |model, other| %>
   [<%= link_to model, edit_admin_role_path(@role, :model => model) %>]
 <% end %>
---> <%= link_to_remote "SAVE PERMISSIONS", :url => {:action => :save_permissions, :controller => :roles }, :submit => "form_permissions" %>
+--> <%= link_to_remote "SAVE PERMISSIONS", :url => {:action => :save_permissions, :controller => :roles },
+    :submit => "form_permissions", :update => "save_permissions" %>
+
+<div id="save_message">
+  <%= render :partial => "save_message", :object => @saved_message %>
+</div>
+
 
 
 <% if params[:model] %>
@@ -27,15 +33,15 @@ Model:
 
 
                 <a title="Grant - <%= text_field_name %>" onclick="$('permission_<%= text_field_name %>').value = 'G';
-                  $('img_inh_<%= text_field_name %>').hide(); $('img_ver_<%= text_field_name %>').show();"
+                          $('img_inh_<%= text_field_name %>').hide(); $('img_ver_<%= text_field_name %>').show();"
                    id="img_inh_<%= text_field_name %>"><img src="/images/icons/inherit.png" /></a>
 
                 <a title="Grant - <%= text_field_name %>" onclick="$('permission_<%= text_field_name %>').value = 'D';
-                  $('img_ver_<%= text_field_name %>').hide(); $('img_unv_<%= text_field_name %>').show();"
+                          $('img_ver_<%= text_field_name %>').hide(); $('img_unv_<%= text_field_name %>').show();"
                    id="img_ver_<%= text_field_name %>"><img src="/images/icons/verified.png" /></a>
 
                 <a title="Grant - <%= text_field_name %>" onclick="$('permission_<%= text_field_name %>').value = 'I';
-                  $('img_unv_<%= text_field_name %>').hide(); $('img_inh_<%= text_field_name %>').show();"
+                          $('img_unv_<%= text_field_name %>').hide(); $('img_inh_<%= text_field_name %>').show();"
                    id="img_unv_<%= text_field_name %>"><img src="/images/icons/unverified.png" /></a>
 
 
@@ -46,11 +52,11 @@ Model:
 
 
         <% if get_permission(@role, text_field_name) == "I" or get_permission(@role, text_field_name) == "" %>
-            $("<%= "img_inh_"+ text_field_name %>").show();
+          $("<%= "img_inh_"+ text_field_name %>").show();
         <% elsif get_permission(@role, text_field_name) == "G" %>
-            $("<%= "img_ver_"+ text_field_name %>").show();
+          $("<%= "img_ver_"+ text_field_name %>").show();
         <% elsif get_permission(@role, text_field_name) == "D" %>
-            $("<%= "img_unv_"+ text_field_name %>").show();
+          $("<%= "img_unv_"+ text_field_name %>").show();
         <% end %>
           
                 </script>

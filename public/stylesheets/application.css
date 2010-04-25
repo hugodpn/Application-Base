@@ -27,3 +27,9 @@ table.normal_table td{
 table.normal_table th{
     background-color: silver;
 }
+
+#message_box {
+    color: #0033cc;
+}
+
+

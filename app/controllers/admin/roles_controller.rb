@@ -83,7 +83,10 @@ class Admin::RolesController < ApplicationController
 
     end
 
-    @role.save
+    if @role.save
+      @saved_message = "Permissions was saved!!"
+    end
+
   end
   
 end

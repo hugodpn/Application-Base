@@ -1,0 +1,17 @@
+page.replace_html("save_message", :partial => "save_message", :object => @saved_message)
+
+
+#page[:save_message].visual_effect :highlight, :startcolor => "#ffffcc", :endcolor => "#ffff00"
+page[:save_message].visual_effect :grow
+
+# visual_effect -->
+# :puff
+# :shake
+# :DropOut
+# :SwitchOff
+# :Squish
+# :Pulsate
+# :Fold
+# :BlindDown
+# :grow
+

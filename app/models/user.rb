@@ -17,6 +17,7 @@
 #  current_login_ip   :string(255)
 #  last_login_ip      :string(255)
 #  is_admin           :boolean
+#  is_enabled         :boolean
 #  created_at         :datetime
 #  updated_at         :datetime
 #
