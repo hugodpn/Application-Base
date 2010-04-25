@@ -14,20 +14,122 @@
 
 one:
   id: 1
-  title: Article one
-  body: This is the first article..
+  title: They’re Calling Almost Everyone’s Tune
+  category: Business
+  created_at: <%= 1.days.ago.to_s :db  %>
+  body: "FOR a man who sits atop one of the most feared corporations in the music business, Irving Azoff seems surprisingly proud of his middle finger. Images of it, raised high and defiant, are hard to avoid in his home, a 12,000-square-foot mansion in one of the richest neighborhoods in this city.
 
+There he is, the chairman of the newly merged Ticketmaster and Live Nation, staring from behind his digit of choice in a photograph on his stationery. And there he is again, grinning from the same vantage point in an image on a sweatshirt that he wears one afternoon when he offers a tour of his estate.
+"
 two:
   id: 2
-  title: Article title 2
-  body: Article body 2..
+  title: A Graying Population, a Graying Work Force
+  category: Business
+  created_at: <%= 2.days.ago.to_s :db  %>
+  body: "Ms. Antonaccio said she empathized. Sometimes her legs hurt from going up and down stairs. “But it’s nothing I pay attention to,” she said. “I don’t have the time.”
+
+Ms. Antonaccio is 73.
+
+In an aging population, the elderly are increasingly being taken care of by the elderly. Professional caregivers — almost all of them women — are one of the fastest-growing segments of the American work force, and also one of the grayest.
+
+A recent study by PHI National, a nonprofit organization that advocates on behalf of caregivers, found that in 2008, 28 percent of home care aides were over age 55, compared with 18 percent of women in the overall work force. "
 
 three:
   id: 3
-  title: Article title 3
-  body: Article body 3..
+  title: The Rise of the Fleet-Footed Start-Up
+  category: Business
+  created_at: <%= 3.days.ago.to_s :db  %>
+  body: "The concept is gaining a following beyond the Valley as well. “If it works, it will reduce failure rates for entrepreneurial ventures and boost innovation,” says Thomas R. Eisenmann, a professor at the Harvard Business School. “That’s a big deal for the economy.”
+
+The term “lean start-up” was coined by Mr. Ries, 31, an engineer, entrepreneur and blogger. His inspiration, he says, was the lean manufacturing process, fine-tuned in Japanese factories decades ago and focused on eliminating any work or investment that doesn’t produce value for customers.
+
+“This is lean manufacturing for start-ups,” explains Mr. Blank, 56, a serial entrepreneur. "
 
 four:
   id: 4
-  title: Article title 4
-  body: Article body 4..
+  title: Labs Where 3-D Is Just the Start
+  category: Business
+  created_at: <%= 4.days.ago.to_s :db  %>
+  body: "IN the late 1980s, research and development in the movie business often took place in sessions like the ones some people called “the never-ending Disney day camp.”
+
+Executives at the Walt Disney Company’s film operation, then run by Jeffrey Katzenberg, were occasionally locked in a conference room at an out-of-town resort from 9 in the morning until 6 in the evening, to thrash out concepts for pictures like “Cocktail” or “Ernest Saves Christmas.”
+
+“You’d sit there pitching out ideas, and see what stuck,” recalled Peter McAlevey, a film producer and a former Disney executive who spent time in Mr. Katzenberg’s ersatz think tanks.
+
+Back then, that’s what used to pass for research and development. Hollywood R.& D. has since become more sophisticated. But not without a struggle. "
+
+five:
+  id: 5
+  title: Testing the iPad’s Trip-Worthiness 
+  category: Technology
+  created_at: <%= 1.days.ago.to_s :db  %>
+  body: " I haven’t had the chance to road test the iPad while vacationing, but after two solid weeks spent testing it on a virtual vacation — a multi-continent jaunt through backwoods, beach and city without leaving my couch — here’s my verdict: if you have an extra $500 to $700 to spend on one, plus another $100 or so for some great apps, it’s worth the plunge.
+
+And now the caveat. You will adore the iPad when you’re in transit and in the hotel room. You’ll have far less use for the thing when you head for the beach, or a city walking tour, or a roadside diner. But more on its weaknesses later.
+
+To name just a few of its advantages as a travel companion: it is a portable (and free) library, word processor, Web browser, translator, park guide, weather forecaster and travel agent, not to mention a great distraction during a long flight."
+
+six:
+  id: 6
+  title: The Rise of the Fleet-Footed Start-Up
+  category: Technology
+  created_at: <%= 2.days.ago.to_s :db  %>
+  body: "The concept is gaining a following beyond the Valley as well. “If it works, it will reduce failure rates for entrepreneurial ventures and boost innovation,” says Thomas R. Eisenmann, a professor at the Harvard Business School. “That’s a big deal for the economy.”
+
+The term “lean start-up” was coined by Mr. Ries, 31, an engineer, entrepreneur and blogger. His inspiration, he says, was the lean manufacturing process, fine-tuned in Japanese factories decades ago and focused on eliminating any work or investment that doesn’t produce value for customers.
+
+“This is lean manufacturing for start-ups,” explains Mr. Blank, 56, a serial entrepreneur.
+
+Since 1978, he has been a founder or early employee in eight start-ups, both winners and losers. To cite a couple, Rocket Science Games, a once-promising video game maker, founded in 1993, cratered amid losses a few years later, while Epiphany, a business software company, founded in 1997, was acquired by a larger corporation for $329 million in 2005 — “one my grandchildren will be grateful for,” Mr. Blank notes. "
+
+seven:
+  id: 7
+  title: Labs Where 3-D Is Just the Start
+  category: Technology
+  created_at: <%= 3.days.ago.to_s :db  %>
+  body: "IN the late 1980s, research and development in the movie business often took place in sessions like the ones some people called “the never-ending Disney day camp.”
+
+Executives at the Walt Disney Company’s film operation, then run by Jeffrey Katzenberg, were occasionally locked in a conference room at an out-of-town resort from 9 in the morning until 6 in the evening, to thrash out concepts for pictures like “Cocktail” or “Ernest Saves Christmas.”
+
+“You’d sit there pitching out ideas, and see what stuck,” recalled Peter McAlevey, a film producer and a former Disney executive who spent time in Mr. Katzenberg’s ersatz think tanks.
+
+Back then, that’s what used to pass for research and development. Hollywood R.& D. has since become more sophisticated. But not without a struggle.
+
+As films have become more complex and technology-driven, studios here and there are trying to overcome their conservative business habits to engage in systematic thinking about the industry’s eternal challenge: What’s next? "
+
+eight:
+  id: 8
+  title: In Army’s Trauma Care Units, Feeling Warehoused
+  category: Health
+  created_at: <%= 1.days.ago.to_s :db  %>
+  body: "A strapping Army sniper who once brimmed with confidence, he had returned emotionally broken from Iraq, where he suffered two concussions from roadside bombs and watched several platoon mates burn to death. The transition unit at Fort Carson, outside Colorado Springs, seemed the surest way to keep suicidal thoughts at bay, his mother thought.
+
+It did not work. He was prescribed a laundry list of medications for anxiety, nightmares, depression and headaches that made him feel listless and disoriented. His once-a-week session with a nurse case manager seemed grossly inadequate to him. And noncommissioned officers — soldiers supervising the unit — harangued or disciplined him when he arrived late to formation or violated rules.
+
+Last August, Specialist Crawford attempted suicide with a bottle of whiskey and an overdose of painkillers. By the end of last year, he was begging to get out of the unit. "
+  
+nine:
+  id: 9
+  title: A Graying Population, a Graying Work Force
+  category: Health
+  created_at: <%= 2.days.ago.to_s :db  %>
+  body: "Ms. Antonaccio said she empathized. Sometimes her legs hurt from going up and down stairs. “But it’s nothing I pay attention to,” she said. “I don’t have the time.”
+
+Ms. Antonaccio is 73.
+
+In an aging population, the elderly are increasingly being taken care of by the elderly. Professional caregivers — almost all of them women — are one of the fastest-growing segments of the American work force, and also one of the grayest.
+
+A recent study by PHI National, a nonprofit organization that advocates on behalf of caregivers, found that in 2008, 28 percent of home care aides were over age 55, compared with 18 percent of women in the overall work force.
+
+The organization projects that from 2008 to 2018, the number of direct care workers, which includes those in nursing homes, will grow to 4.3 million from 3.2 million. The percentage of older caregivers is projected to grow to 30 percent from 22 percent. "
+
+ten:
+  id: 10
+  title: A Yoga Manifesto
+  category: Health
+  created_at: <%= 3.days.ago.to_s :db  %>
+  body: "You can even combine yoga with a vacation in the Caribbean, but it will cost you: in August, the luxurious Parrot Cay resort in Turks and Caicos has a six-night retreat with classes taught by the “yoga rock stars” (in the words of the press release) Rodney Yee and Colleen Saidman. The cost? A cool $6,077. (In August!)
+
+And is it surprising that yoga, like so much else in this age of celebrity, now has something of a star system, with yoga teachers now almost as recognizable as Oscar winners? The flowing locks of Rodney Yee. The do-rag bandanna worn by Baron Baptiste. The hyper perpetual calm exhibited by David Life and Sharon Gannon, who taught Sting, Madonna and Russell Simmons. The contortions (and Rolls-Royces) of Bikram Choudhury.
+
+Yoga is definitely big business these days. A 2008 poll, commissioned by Yoga Journal, concluded that the number of people doing yoga had declined from 16.5 million in 2004 to 15.8 million almost four years later. But the poll also estimated that the actual spending on yoga classes and products had almost doubled in that same period, from $2.95 billion to $5.7 billion. "

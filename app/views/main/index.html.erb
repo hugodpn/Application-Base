@@ -1,2 +1,10 @@
-<h1>Main Application</h1>
-<h3>Application Base</h3>
+<h1>Articles</h1>
+
+
+<% @articles.each do |article| %>
+  <h2><%= article.title %></h2>
+  <p><b><%= article.category %></b></p>
+  <p><b><%= article.created_at %></b></p>
+  <%= article.body %>
+  <hr />
+<% end %>

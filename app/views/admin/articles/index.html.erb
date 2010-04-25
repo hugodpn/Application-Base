@@ -2,12 +2,14 @@
 
 <table class="normal_table">
   <tr>
+    <th>Created</th>
     <th>Title</th>
     <th>Body</th>
   </tr>
 
 <% @articles.each do |article| %>
   <tr>
+    <td><%=h article.created_at %></td>
     <td><%=h article.title %></td>
     <td><%=h article.body[0..50] + "..." %></td>
     <td><%= link_to 'Show', [:admin, article] %></td>

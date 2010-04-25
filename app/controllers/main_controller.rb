@@ -7,6 +7,6 @@ class MainController < ApplicationController
   end
 
   def index
-    
+    @articles = Article.find(:all, :order => "created_at desc")
   end
 end
