@@ -19,14 +19,23 @@
   </p>
   <!--
   <p>
-    <%#= f.label :is_admin %><br />
-    <%#= f.check_box :is_admin %>
+  <%#= f.label :is_admin %><br />
+  <%#= f.check_box :is_admin %>
   </p>
   -->
   <p>
     <%= f.label :is_enabled %><br />
     <%= f.check_box :is_enabled %>
   </p>
+
+  <p>
+    Roles:<br />
+    <% @roles.each do |role| %>
+      <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
+      <%= role.name %><br />
+    <% end %>
+  </p>
+
   <p>
     <%= f.submit 'Submit' %>
   </p>

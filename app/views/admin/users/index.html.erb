@@ -4,11 +4,17 @@
   <th>Login</th>
   <th>Email</th>
   <th>Enabled</th>
+  <th>Roles</th>
   <% @users.each do |user| %>
     <tr>
       <td><%= user.login %></td>
       <td><%= user.email %></td>
       <td><%= user.is_enabled %></td>
+      <td>
+        <% user.roles.each do |r| %>
+          <%= r.name %>, 
+        <% end %>
+      </td>
       <td><%= link_to 'Show', [:admin, user] %></td>
       <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
       <td><%= link_to 'Destroy', [:admin, user], :confirm => 'Are you sure?', :method => :delete %></td>

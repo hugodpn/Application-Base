@@ -16,9 +16,11 @@ class Admin::UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @roles = Role.find(:all)
   end
 
   def update
+    params[:user][:role_ids] ||= []
     @user = User.find(params[:id])
 
     respond_to do |format|
@@ -35,6 +37,7 @@ class Admin::UsersController < ApplicationController
 
   def new
     @user = User.new
+    @roles = Role.find(:all)
 
     respond_to do |format|
       format.html # new.html.erb
