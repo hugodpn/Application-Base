@@ -6,8 +6,8 @@
     </ul>
   </li>
 
-  <% if current_user.has_perm?("articles_article_can_list") or current_user.has_perm?("users_user_can_list") or 
-      current_user.has_perm?("roles_role_can_list") %>
+  <% if current_user && ( current_user.has_perm?("articles_article_can_list") or current_user.has_perm?("users_user_can_list") or
+      current_user.has_perm?("roles_role_can_list") ) %>
   
     <li>Admin
       <ul>
