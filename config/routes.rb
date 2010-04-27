@@ -1,5 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :categories
 
 
   map.login 'login', :controller => 'user_sessions', :action => 'new'
@@ -13,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :articles
     admin.resources :users
     admin.resources :roles
+    admin.resources :categories
   end
 
 
