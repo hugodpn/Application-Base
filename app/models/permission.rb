@@ -75,6 +75,13 @@ class Permission < ActiveRecord::Base
         :columns => ["can"],
         :rows => ["list", "show", "update", "create", "destroy"]
       }
+    },
+    :categories => {
+      :category => {
+        :title => "Categories Permissions",
+        :columns => ["can"],
+        :rows => ["list", "show", "update", "create", "destroy"]
+      }
     }
   }
 

@@ -12,9 +12,9 @@
     <li>Admin
       <ul>
         <% if current_user.has_perm?("articles_article_can_list") %><li><%= link_to "Articles", admin_articles_path %></li> <% end %>
+        <% if current_user.has_perm?("categories_category_can_list") %><li><%= link_to "Categories", admin_categories_path %></li><% end %>
         <% if current_user.has_perm?("users_user_can_list") %><li><%= link_to "Users", admin_users_path %></li><% end %>
         <% if current_user.has_perm?("roles_role_can_list") %><li><%= link_to "Roles", admin_roles_path %></li><% end %>
-        <% if current_user.has_perm?("categories_category_can_list") %><li><%= link_to "Categories", admin_categories_path %></li><% end %>
       </ul>
     </li>
   <% end %>

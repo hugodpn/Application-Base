@@ -1,0 +1,12 @@
+business:
+  id: 1
+  name: Business
+
+technology:
+  id: 2
+  name: Technology
+
+health:
+  id: 3
+  name: Health
+
