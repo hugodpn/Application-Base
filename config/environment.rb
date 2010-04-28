@@ -22,6 +22,7 @@ Rails::Initializer.run do |config|
   config.gem "authlogic",       :version => '2.1.3'
   config.gem "rspec",           :version => '>=1.3.0',     :lib => 'spec'
   config.gem "rspec-rails",     :version => '>=1.3.2',     :lib => 'spec'
+  config.gem "factory_girl",    :version => ">= 1.2.4",    :lib => "factory_girl"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

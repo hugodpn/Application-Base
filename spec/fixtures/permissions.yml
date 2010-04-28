@@ -1,0 +1,34 @@
+articles_article_can_list:
+  id: 1
+  permissible_id: 1
+  permissible_type: Role
+  action: articles_article_can_list
+  granted: 1
+
+articles_article_can_create:
+  id: 2
+  permissible_id: 1
+  permissible_type: Role
+  action: articles_article_can_create
+  granted: 1
+
+articles_article_can_update:
+  id: 3
+  permissible_id: 1
+  permissible_type: Role
+  action: articles_article_can_update
+  granted: 1
+
+articles_article_can_show:
+  id: 4
+  permissible_id: 1
+  permissible_type: Role
+  action: articles_article_can_show
+  granted: 1
+
+articles_article_can_destroy:
+  id: 5
+  permissible_id: 1
+  permissible_type: Role
+  action: articles_article_can_destroy
+  granted: 1

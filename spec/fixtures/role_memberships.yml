@@ -1,0 +1,5 @@
+one:
+  id: 1
+  roleable_id: 2
+  roleable_type: User
+  role_id: 1

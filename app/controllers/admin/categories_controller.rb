@@ -1,4 +1,7 @@
 class Admin::CategoriesController < ApplicationController
+
+#  skip_before_filter :require_authentification, :only => [:index, :new, :create]
+
   # GET /categories
   # GET /categories.xml
   def index
