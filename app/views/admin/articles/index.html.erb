@@ -4,6 +4,7 @@
   <tr>
     <th>Created</th>
     <th>Title</th>
+    <th>Category</th>
     <th>Body</th>
   </tr>
 
@@ -11,7 +12,8 @@
   <tr>
     <td><%=h article.created_at %></td>
     <td><%=h article.title %></td>
-    <td><%=h article.body[0..50] + "..." %></td>
+    <td><%=h article.category.name %></td>
+    <td><%=h article.body[0..30] + "..." %></td>
     <td><%= link_to 'Show', [:admin, article] %></td>
     <td><%= link_to 'Edit', edit_admin_article_path(article) %></td>
     <td><%= link_to 'Destroy', [:admin, article], :confirm => 'Are you sure?', :method => :delete %></td>

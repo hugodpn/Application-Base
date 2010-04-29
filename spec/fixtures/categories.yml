@@ -1,7 +1,12 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+business:
+  id: 1
+  name: Business
 
-one:
-  name: MyString
+technology:
+  id: 2
+  name: Technology
 
-two:
-  name: MyString
+health:
+  id: 3
+  name: Health
+

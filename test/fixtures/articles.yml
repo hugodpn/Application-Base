@@ -15,7 +15,7 @@
 one:
   id: 1
   title: They’re Calling Almost Everyone’s Tune
-  category: Business
+  category_id: 1
   created_at: <%= 1.days.ago.to_s :db  %>
   body: "FOR a man who sits atop one of the most feared corporations in the music business, Irving Azoff seems surprisingly proud of his middle finger. Images of it, raised high and defiant, are hard to avoid in his home, a 12,000-square-foot mansion in one of the richest neighborhoods in this city.
 
@@ -24,7 +24,7 @@ There he is, the chairman of the newly merged Ticketmaster and Live Nation, star
 two:
   id: 2
   title: A Graying Population, a Graying Work Force
-  category: Business
+  category_id: 1
   created_at: <%= 2.days.ago.to_s :db  %>
   body: "Ms. Antonaccio said she empathized. Sometimes her legs hurt from going up and down stairs. “But it’s nothing I pay attention to,” she said. “I don’t have the time.”
 
@@ -37,7 +37,7 @@ A recent study by PHI National, a nonprofit organization that advocates on behal
 three:
   id: 3
   title: The Rise of the Fleet-Footed Start-Up
-  category: Business
+  category_id: 1
   created_at: <%= 3.days.ago.to_s :db  %>
   body: "The concept is gaining a following beyond the Valley as well. “If it works, it will reduce failure rates for entrepreneurial ventures and boost innovation,” says Thomas R. Eisenmann, a professor at the Harvard Business School. “That’s a big deal for the economy.”
 
@@ -48,7 +48,7 @@ The term “lean start-up” was coined by Mr. Ries, 31, an engineer, entreprene
 four:
   id: 4
   title: Labs Where 3-D Is Just the Start
-  category: Business
+  category_id: 1
   created_at: <%= 4.days.ago.to_s :db  %>
   body: "IN the late 1980s, research and development in the movie business often took place in sessions like the ones some people called “the never-ending Disney day camp.”
 
@@ -61,7 +61,7 @@ Back then, that’s what used to pass for research and development. Hollywood R.
 five:
   id: 5
   title: Testing the iPad’s Trip-Worthiness 
-  category: Technology
+  category_id: 2
   created_at: <%= 1.days.ago.to_s :db  %>
   body: " I haven’t had the chance to road test the iPad while vacationing, but after two solid weeks spent testing it on a virtual vacation — a multi-continent jaunt through backwoods, beach and city without leaving my couch — here’s my verdict: if you have an extra $500 to $700 to spend on one, plus another $100 or so for some great apps, it’s worth the plunge.
 
@@ -72,7 +72,7 @@ To name just a few of its advantages as a travel companion: it is a portable (an
 six:
   id: 6
   title: The Rise of the Fleet-Footed Start-Up
-  category: Technology
+  category_id: 2
   created_at: <%= 2.days.ago.to_s :db  %>
   body: "The concept is gaining a following beyond the Valley as well. “If it works, it will reduce failure rates for entrepreneurial ventures and boost innovation,” says Thomas R. Eisenmann, a professor at the Harvard Business School. “That’s a big deal for the economy.”
 
@@ -85,7 +85,7 @@ Since 1978, he has been a founder or early employee in eight start-ups, both win
 seven:
   id: 7
   title: Labs Where 3-D Is Just the Start
-  category: Technology
+  category_id: 2
   created_at: <%= 3.days.ago.to_s :db  %>
   body: "IN the late 1980s, research and development in the movie business often took place in sessions like the ones some people called “the never-ending Disney day camp.”
 
@@ -100,7 +100,7 @@ As films have become more complex and technology-driven, studios here and there 
 eight:
   id: 8
   title: In Army’s Trauma Care Units, Feeling Warehoused
-  category: Health
+  category_id: 3
   created_at: <%= 1.days.ago.to_s :db  %>
   body: "A strapping Army sniper who once brimmed with confidence, he had returned emotionally broken from Iraq, where he suffered two concussions from roadside bombs and watched several platoon mates burn to death. The transition unit at Fort Carson, outside Colorado Springs, seemed the surest way to keep suicidal thoughts at bay, his mother thought.
 
@@ -111,7 +111,7 @@ Last August, Specialist Crawford attempted suicide with a bottle of whiskey and 
 nine:
   id: 9
   title: A Graying Population, a Graying Work Force
-  category: Health
+  category_id: 3
   created_at: <%= 2.days.ago.to_s :db  %>
   body: "Ms. Antonaccio said she empathized. Sometimes her legs hurt from going up and down stairs. “But it’s nothing I pay attention to,” she said. “I don’t have the time.”
 
@@ -126,7 +126,7 @@ The organization projects that from 2008 to 2018, the number of direct care work
 ten:
   id: 10
   title: A Yoga Manifesto
-  category: Health
+  category_id: 3
   created_at: <%= 3.days.ago.to_s :db  %>
   body: "You can even combine yoga with a vacation in the Caribbean, but it will cost you: in August, the luxurious Parrot Cay resort in Turks and Caicos has a six-night retreat with classes taught by the “yoga rock stars” (in the words of the press release) Rodney Yee and Colleen Saidman. The cost? A cool $6,077. (In August!)
 

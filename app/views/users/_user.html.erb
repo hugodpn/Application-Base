@@ -1,22 +1,22 @@
-<% form_for @user do |form| %>
-  <%= form.error_messages %>
-    <li>
-      <%= form.label :login, "Username" %>
-      <%= form.text_field :login %>
-    </li>
-    <li>
-      <%= form.label :email, "Email" %>
-      <%= form.text_field :email %>
-    </li>
-    <li>
-      <%= form.label :password, "Password" %>
-      <%= form.password_field :password %>
-    </li>
-    <li>
-      <%= form.label :password_confirmation, "Password confirmation" %>
-      <%= form.password_field :password_confirmation %>
-    </li>
-    <li>
-      <%= form.submit "Submit" %>
-    </li>
+<% form_for @user do |f| %>
+  <%= f.error_messages %>
+    <p>
+      <%= f.label :login, "Username" %><br />
+      <%= f.text_field :login %>
+    </p>
+    <p>
+      <%= f.label :email, "Email" %><br />
+      <%= f.text_field :email %>
+    </p>
+    <p>
+      <%= f.label :password, "Password" %><br />
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <%= f.label :password_confirmation, "Password confirmation" %><br />
+      <%= f.password_field :password_confirmation %>
+    </p>
+    <p>
+      <%= f.submit "Submit" %>
+    </p>
 <% end %>

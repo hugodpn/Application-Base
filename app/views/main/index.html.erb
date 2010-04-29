@@ -3,7 +3,7 @@
 
 <% @articles.each do |article| %>
   <h2><%= article.title %></h2>
-  <p><b><%= article.category %></b></p>
+  <p><b><%= article.category.name %></b></p>
   <p><b><%= article.created_at %></b></p>
   <%= article.body %>
   <hr />
