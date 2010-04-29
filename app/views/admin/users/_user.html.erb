@@ -27,6 +27,10 @@
     <%= f.label :is_enabled %><br />
     <%= f.check_box :is_enabled %>
   </p>
+  <p>
+    <%= f.label :language %><br />
+    <%= f.select :language, [['English', 'en'], ['Español', 'es']] %>
+  </p>
 
   <p>
     Roles:<br />

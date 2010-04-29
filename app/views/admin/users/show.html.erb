@@ -64,6 +64,11 @@
 </p>
 
 <p>
+  <b>Language:</b>
+  <%=h @user.language %>
+</p>
+
+<p>
   <b>Roles:</b>
   <% @user.roles.each do |r| %>
     <%= r.name %>, 

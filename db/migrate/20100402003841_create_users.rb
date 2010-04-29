@@ -15,9 +15,10 @@ class CreateUsers < ActiveRecord::Migration
       t.datetime  :last_login_at     
       t.string    :current_login_ip  
       t.string    :last_login_ip  
+      t.string    :language,            :default => "es"
 
-      t.boolean   :is_admin, :default => false
-      t.boolean   :is_enabled, :default => false
+      t.boolean   :is_admin,            :default => false
+      t.boolean   :is_enabled,          :default => false
       t.timestamps
     end
 

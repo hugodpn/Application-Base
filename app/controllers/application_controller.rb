@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
   filter_parameter_logging :password, :password_confirmation
   before_filter :require_authentification
+  before_filter :set_user_language
 
   helper_method :current_user
 
@@ -38,6 +39,10 @@ class ApplicationController < ActionController::Base
     unless current_user and  current_user.has_perm?(permission)
       permission_deny
     end
+  end
+
+  def set_user_language
+    I18n.locale = current_user.language if current_user
   end
 
 end

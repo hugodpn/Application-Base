@@ -38,6 +38,7 @@ admin:
   last_login_ip: nil
   is_admin: true
   is_enabled: true
+  language: en
   created_at: 2010-04-03 15:53:23
   updated_at: 2010-04-03 15:53:23
 
@@ -57,6 +58,7 @@ user:
   last_login_ip: nil
   is_admin: false
   is_enabled: true
+  language: es
   created_at: 2010-04-03 15:53:23
   updated_at: 2010-04-03 15:53:23
 
@@ -76,5 +78,6 @@ user_two:
   last_login_ip: nil
   is_admin: false
   is_enabled: false
+  language: en
   created_at: 2010-04-03 15:53:23
   updated_at: 2010-04-03 15:53:23
