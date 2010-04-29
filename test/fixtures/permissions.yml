@@ -1,3 +1,17 @@
+# == Schema Information
+# Schema version: 20100427230408
+#
+# Table name: permissions
+#
+#  id               :integer(4)      not null, primary key
+#  permissible_id   :integer(4)
+#  permissible_type :string(255)
+#  action           :string(255)
+#  granted          :boolean(1)
+#  created_at       :datetime
+#  updated_at       :datetime
+#
+
 articles_article_can_list:
   id: 1
   permissible_id: 1

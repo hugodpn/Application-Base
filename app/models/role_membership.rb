@@ -1,12 +1,12 @@
 # == Schema Information
-# Schema version: 20100418035017
+# Schema version: 20100427230408
 #
 # Table name: role_memberships
 #
-#  id            :integer         not null, primary key
-#  roleable_id   :integer
+#  id            :integer(4)      not null, primary key
+#  roleable_id   :integer(4)
 #  roleable_type :string(255)
-#  role_id       :integer
+#  role_id       :integer(4)
 #  created_at    :datetime
 #  updated_at    :datetime
 #

@@ -1,13 +1,13 @@
 # == Schema Information
-# Schema version: 20100418035017
+# Schema version: 20100427230408
 #
 # Table name: permissions
 #
-#  id               :integer         not null, primary key
-#  permissible_id   :integer
+#  id               :integer(4)      not null, primary key
+#  permissible_id   :integer(4)
 #  permissible_type :string(255)
 #  action           :string(255)
-#  granted          :boolean
+#  granted          :boolean(1)
 #  created_at       :datetime
 #  updated_at       :datetime
 #

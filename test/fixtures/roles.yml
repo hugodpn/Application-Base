@@ -1,9 +1,9 @@
 # == Schema Information
-# Schema version: 20100418035017
+# Schema version: 20100427230408
 #
 # Table name: roles
 #
-#  id         :integer         not null, primary key
+#  id         :integer(4)      not null, primary key
 #  name       :string(255)
 #  created_at :datetime
 #  updated_at :datetime
