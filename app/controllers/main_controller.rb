@@ -7,6 +7,7 @@ class MainController < ApplicationController
   end
 
   def index
-    @articles = Article.find(:all, :order => "created_at desc")
+    @articles = Article.paginate :page => params[:page], :order => 'created_at DESC'
   end
+  
 end
