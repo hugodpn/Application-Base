@@ -48,6 +48,14 @@ es:
       created: "Creado"
 
 
+  categories:
+    listing_categories: "Listando Categorías"
+    new_category: "Nueva Categoría"
+    edit_category: "Editando Categoría"
+    show_category: "Mostrando Categoría"
+    fields:
+      name: "Nombre"
+
   general:
     edit: "Editar"
     new: "Nuevo"

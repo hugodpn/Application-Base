@@ -46,6 +46,14 @@ en:
       category: "Category"
       created: "Created"
 
+  category:
+    listing_categories: "Listing Categories"
+    new_category: "New Category"
+    edit_category: "Editing Category"
+    edit_category: "Showing Category"
+    fields:
+      name: "Name"
+
     
 
   general:
