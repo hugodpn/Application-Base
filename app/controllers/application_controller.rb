@@ -42,7 +42,11 @@ class ApplicationController < ActionController::Base
   end
 
   def set_user_language
-    I18n.locale = current_user.language if current_user
+    if current_user
+      I18n.locale = current_user.language
+    else
+      I18n.locale = "es"
+    end
   end
 
 end

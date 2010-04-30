@@ -1,35 +1,35 @@
 <ul id="menu">
 
-  <li>Home
+  <li><%= t('menu.main.title') %>
     <ul>
-      <li><%= link_to 'Go home', '/main' %></li>
+      <li><%= link_to t('menu.main.home'), '/main' %></li>
     </ul>
   </li>
 
   <% if current_user && ( current_user.has_perm?("articles_article_can_list") or current_user.has_perm?("users_user_can_list") or
       current_user.has_perm?("roles_role_can_list") ) %>
   
-    <li>Admin
+    <li><%= t('menu.admin.title') %>
       <ul>
-        <% if current_user.has_perm?("articles_article_can_list") %><li><%= link_to "Articles", admin_articles_path %></li> <% end %>
-        <% if current_user.has_perm?("categories_category_can_list") %><li><%= link_to "Categories", admin_categories_path %></li><% end %>
-        <% if current_user.has_perm?("users_user_can_list") %><li><%= link_to "Users", admin_users_path %></li><% end %>
-        <% if current_user.has_perm?("roles_role_can_list") %><li><%= link_to "Roles", admin_roles_path %></li><% end %>
+        <% if current_user.has_perm?("articles_article_can_list") %><li><%= link_to t('menu.admin.articles'), admin_articles_path %></li> <% end %>
+        <% if current_user.has_perm?("categories_category_can_list") %><li><%= link_to t('menu.admin.categories'), admin_categories_path %></li><% end %>
+        <% if current_user.has_perm?("users_user_can_list") %><li><%= link_to t('menu.admin.users'), admin_users_path %></li><% end %>
+        <% if current_user.has_perm?("roles_role_can_list") %><li><%= link_to t('menu.admin.roles'), admin_roles_path %></li><% end %>
       </ul>
     </li>
   <% end %>
 
 
-  <li>User
+    <li><%= t('menu.user.title') %>
     <ul>
       <% if current_user %>
-        <li><%= link_to "Edit profile", edit_user_path(:current) %></li>
+        <li><%= link_to t('menu.user.edit_profile'), edit_user_path(:current) %></li>
         <!--
-        <li><%= link_to "Log out", logout_path %> </li>
+        <li><%= link_to t('menu.user.logout'), logout_path %> </li>
         -->
       <% else %>
-        <li><%= link_to 'Register', new_user_path %></li>
-        <li><%= link_to "Log in", login_path %> </li>
+        <li><%= link_to t('menu.user.register'), new_user_path %></li>
+        <li><%= link_to t('menu.user.login'), login_path %> </li>
       <% end %>
     </ul>
   </li>

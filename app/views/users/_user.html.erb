@@ -1,26 +1,26 @@
 <% form_for @user do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :login, "Username" %><br />
+    <%= f.label :login, t('users.fields.username') %><br />
     <%= f.text_field :login %>
   </p>
   <p>
-    <%= f.label :email, "Email" %><br />
+    <%= f.label :email, t('users.fields.email') %><br />
     <%= f.text_field :email %>
   </p>
   <p>
-    <%= f.label :password, "Password" %><br />
+    <%= f.label :password, t('users.fields.password') %><br />
     <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.label :password_confirmation, "Password confirmation" %><br />
+    <%= f.label :password_confirmation, t('users.fields.password_confirmation') %><br />
     <%= f.password_field :password_confirmation %>
   </p>
   <p>
-    <%= f.label :language %><br />
+    <%= f.label :language, t('users.fields.language') %><br />
     <%= f.select :language, [['English', 'en'], ['Español', 'es']] %>
   </p>
   <p>
-    <%= f.submit "Submit" %>
+    <%= f.submit t('general.submit') %>
   </p>
 <% end %>
