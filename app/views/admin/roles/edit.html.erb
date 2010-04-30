@@ -1,14 +1,14 @@
-<h1>Editing Role</h1>
+<h1><%= t('roles.edit_role') %></h1>
 
 <% form_for([:admin, @role]) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :name, t('roles.fields.name') %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit t('general.submit') %>
   </p>
 <% end %>
 

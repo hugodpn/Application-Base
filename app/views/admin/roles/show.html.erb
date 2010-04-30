@@ -1,8 +1,10 @@
+<h1><%= t('roles.show_role') %></h1>
+
 <p>
-  <b>Role:</b>
+  <b><%= t('roles.fields.name') %>:</b>
   <%=h @role.name %>
 </p>
 
 
-<%= link_to 'Edit', '/admin/roles/' + @role.id.to_s + '/edit?model=' + Permission::PERMISSIONS.first.first.to_s %>
-<%= link_to 'Back', admin_roles_path %>
+<%= link_to t('general.edit'), '/admin/roles/' + @role.id.to_s + '/edit?model=' + Permission::PERMISSIONS.first.first.to_s %>
+<%= link_to t('general.back'), admin_roles_path %>

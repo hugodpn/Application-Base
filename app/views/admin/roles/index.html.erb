@@ -1,17 +1,17 @@
-<h1>Listing Roles</h1>
+<h1><%= t('roles.listing_roles') %></h1>
 
 <table class="normal_table">
-  <th>Role</th>
+  <th><%= t('roles.fields.name') %></th>
   <% @roles.each do |role|  %>
     <tr>
       <td><%= role.name %></td>
-      <td><%= link_to 'Show', [:admin, role] %></td>
-      <td><%= link_to 'Edit', '/admin/roles/' + role.id.to_s + '/edit?model=' + Permission::PERMISSIONS.first.first.to_s %></td>
-      <td><%= link_to 'Destroy', [:admin, role], :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to t('general.show'), [:admin, role] %></td>
+      <td><%= link_to t('general.edit'), '/admin/roles/' + role.id.to_s + '/edit?model=' + Permission::PERMISSIONS.first.first.to_s %></td>
+      <td><%= link_to t('general.destroy'), [:admin, role], :confirm => t('general.confirmation'), :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New role', new_admin_role_path %>
+<%= link_to t('general.new'), new_admin_role_path %>

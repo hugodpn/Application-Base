@@ -29,12 +29,27 @@ es:
     edit_user: "Editar Usuario"
     new_user: "Crear Usuario"
     register: "Registrar Usuario"
+    listing_users: "Listando Usuarios"
+    editing_user: "Editando Usuario"
+    show_user: "Mostrando Usuario"
     fields:
       username: "Nombre de usuario"
       email: "e-Mail"
       password: "Contraseña"
       password_confirmation: "Confirmar contraseña"
       language: "Lenguaje"
+      enabled: "Activado"
+      roles: "Roles"
+      login_count: "Cant. Ingresos"
+      fail_login_count: "Cant. Ingresos Fallidos"
+      last_request: "Último Request"
+      current_login: "Login Actual"
+      last_login: "Último Login"
+      current_login_ip:  "IP Actual"
+      last_login_ip: "Última IP"
+      is_admin: "Is admin?"
+      created: "Creado"
+      updated: "Actualizado"
 
   articles:
     listing_articles: "Listando Artículos"
@@ -55,6 +70,17 @@ es:
     show_category: "Mostrando Categoría"
     fields:
       name: "Nombre"
+
+  roles:
+    listing_roles: "Listando Roles"
+    new_role: "Nuevo Role"
+    edit_role: "Editando Role"
+    show_role: "Mostrando Role"
+    fields:
+      name: "Nombre"
+
+  main:
+    title: "Artículos"
 
   general:
     edit: "Editar"

@@ -6,7 +6,7 @@ en:
     title: "Application base"
     user: "User"
     info: "Information"
-    
+   
   menu:
     main:
       title: "Main"
@@ -28,33 +28,57 @@ en:
     edit_user: "Edit User"
     new_user: "New User"
     register: "Register User"
+    listing_users: "Listing Users"
+    editing_user: "Editing User"
+    show_user: "Showing User"
     fields:
       username: "User Name"
       email: "e-Mail"
       password: "Password"
       password_confirmation: "Password confirmation"
       language: "Language"
+      enabled: "Enabled"
+      roles: "Roles"
+      login_count: "Login Count"
+      fail_login_count: "Fail Login Count"
+      last_request: "Last Request"
+      current_login: "Current Login"
+      last_login: "Last Login"
+      current_login_ip:  "Current Login IP"
+      last_login_ip: "Last Login IP"
+      is_admin: "Is admin?"
+      created: "Created"
+      updated: "Updated"
 
   articles:
     listing_articles: "Listing Articles"
     new_article: "New Article"
     edit_article: "Editing Article"
-    edit_article: "Showing Article"
+    show_article: "Showing Article"
     fields:
       title: "Title"
       body: "Body"
       category: "Category"
       created: "Created"
 
-  category:
+  categories:
     listing_categories: "Listing Categories"
     new_category: "New Category"
     edit_category: "Editing Category"
-    edit_category: "Showing Category"
+    show_category: "Showing Category"
     fields:
       name: "Name"
 
-    
+  roles:
+    listing_roles: "Listing Roles"
+    new_role: "New Role"
+    edit_role: "Editing Role"
+    show_role: "Showing Role"
+    fields:
+      name: "Name"
+
+  main:
+    title: "Articles"
 
   general:
     edit: "Edit"
