@@ -1,23 +1,14 @@
-<h1>New article</h1>
+<h1><%= t('articles.new_article') %></h1>
 
 <% form_for([:admin, @article]) do |f| %>
   <%= f.error_messages %>
 
+  <%= render :partial => "form", :locals => { :f => f } %>
+
   <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.submit t('general.submit') %>
   </p>
-  <p>
-    <%= f.label :category %><br />
-    <%= f.select("category_id", Category.all.collect {|p| [ p.name, p.id ] }, { :include_blank => false }) %>
-  </p>
-  <p>
-    <%= f.label :body %><br />
-    <%= f.text_area :body, :size => "50x6" %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+
 <% end %>
 
-<%= link_to 'Back', admin_articles_path %>
+<%= link_to t('general.back'), admin_articles_path %>

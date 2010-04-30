@@ -4,6 +4,8 @@
 es:
   application:
     title: "Aplicaci&oacute;n base"
+    user: "Usuario"
+    info: "Información"
 
 
   menu:
@@ -34,12 +36,27 @@ es:
       password_confirmation: "Confirmar contraseña"
       language: "Lenguaje"
 
+  articles:
+    listing_articles: "Listando Artículos"
+    new_article: "Nuevo Artículo"
+    edit_article: "Editando Artículo"
+    show_article: "Mostrando Artículo"
+    fields:
+      title: "Título"
+      body: "Cuerpo"
+      category: "Categoría"
+      created: "Creado"
+
+
   general:
-    edit: "Edit"
-    new: "New"
-    show: "Show"
-    destroy: "Destroy"
+    edit: "Editar"
+    new: "Nuevo"
+    show: "Ver"
+    destroy: "Eliminar"
     submit: "Enviar"
+    confirmation: "¿Está seguro?"
+    back: "Volver"
+    update: "Actualizar"
 
 
 

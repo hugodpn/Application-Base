@@ -4,6 +4,8 @@
 en:
   application:
     title: "Application base"
+    user: "User"
+    info: "Information"
     
   menu:
     main:
@@ -33,9 +35,25 @@ en:
       password_confirmation: "Password confirmation"
       language: "Language"
 
+  articles:
+    listing_articles: "Listing Articles"
+    new_article: "New Article"
+    edit_article: "Editing Article"
+    edit_article: "Showing Article"
+    fields:
+      title: "Title"
+      body: "Body"
+      category: "Category"
+      created: "Created"
+
+    
+
   general:
     edit: "Edit"
     new: "New"
     show: "Show"
     destroy: "Destroy"
     submit: "Submit"
+    confirmation: "Are you sure?"
+    back: "Back"
+    update: "Update"

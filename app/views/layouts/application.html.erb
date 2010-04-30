@@ -22,12 +22,10 @@
     <div id="right_panel">
       <% if current_user %>
         <div id="user_info">
-          User Info: <%= current_user.login %><br />
+          <%= t('application.user') %>: <%= current_user.login %><br />
         </div>
         <div id="info">
-          <!--
-          Information here...
-          -->
+          <%= t('application.info') %><br />
           <%= link_to t('menu.user.logout'), logout_path %>
         </div>
       <% end %>

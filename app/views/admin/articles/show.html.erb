@@ -1,13 +1,19 @@
+<h1><%= t('articles.show_article') %></h1>
 <p>
-  <b>Title:</b>
+  <b><%= t('articles.fields.title') %>:</b>
   <%=h @article.title %>
 </p>
 
 <p>
-  <b>Body:</b>
+  <b><%= t('articles.fields.category') %>:</b>
+  <%=h @article.category.name %>
+</p>
+
+<p>
+  <b><%= t('articles.fields.body') %>:</b>
   <%=h @article.body %>
 </p>
 
 
-<%= link_to 'Edit', edit_admin_article_path(@article) %> |
-<%= link_to 'Back', admin_articles_path %>
+<%= link_to t('general.edit'), edit_admin_article_path(@article) %> |
+<%= link_to t('general.back'), admin_articles_path %>
