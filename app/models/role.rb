@@ -18,6 +18,8 @@ class Role < ActiveRecord::Base
   #has_many :users, :through => :roleables, :source => :roleable, :source_type => 'User'
   
   validates_uniqueness_of :name
+  validates_presence_of :name
   
   acts_as_permissible
+
 end

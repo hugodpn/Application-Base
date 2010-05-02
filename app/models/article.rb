@@ -13,7 +13,10 @@
 
 class Article < ActiveRecord::Base
   belongs_to :category
+  validates_presence_of :title
 
+  alias_attribute :name, :title
+  
   cattr_reader :per_page
   @@per_page = 5
 

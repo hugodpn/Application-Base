@@ -33,7 +33,7 @@
   </p>
 
   <p>
-    <%= t('users.fields.roles') %><br />
+    <%= f.label :roles, t('users.fields.roles') %><br />
     <% @roles.each do |role| %>
       <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
       <%= role.name %><br />
