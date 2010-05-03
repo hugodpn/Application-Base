@@ -23,7 +23,15 @@ en:
       login: "Log in"
       logout: "Log out"
       register: "Register"
-      
+
+  access:
+    title: "Login"
+    login: "Login"
+    disabled: "Sorry, login has been disabled for your account"
+    password: "Password"
+    login_msg: "Successfully logged in."
+    logout_msg: "Successfully logged out."
+
   users:
     edit_user: "Edit User"
     new_user: "New User"

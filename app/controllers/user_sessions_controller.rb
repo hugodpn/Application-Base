@@ -9,7 +9,7 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      flash[:notice] = "Successfully logged in."
+      flash[:notice] = t('access.login_msg')
       redirect_to root_url
     else
       render :action => 'new'
@@ -23,7 +23,7 @@ class UserSessionsController < ApplicationController
     end
     @user_session = UserSession.find
     @user_session.destroy
-    flash[:notice] = "Successfully logged out."
+    flash[:notice] = t('access.logout_msg')
     redirect_to root_url
   end
 

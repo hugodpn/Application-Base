@@ -25,6 +25,15 @@ es:
       logout: "Salir"
       register: "Registro"
 
+  access:
+    title: "Registro"
+    login: "Usuario"
+    disabled: "Lo sentimos, su usuario ha sido desactivado."
+    password: "Contraseña"
+    login_msg: "Ingreso exitoso."
+    logout_msg: "Salida exitosa."
+
+
   users:
     edit_user: "Editar Usuario"
     new_user: "Crear Usuario"

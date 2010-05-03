@@ -5,11 +5,13 @@ class UserSession < Authlogic::Session::Base
     # redundant, though the overhead shouldn't be too high
     user = search_for_record(find_by_login_method, send(login_field))
 
-    # this is the field indicating if the user should be allowed to login
-    unless user.is_enabled
-      # user is not allowed to login, add an error telling the user they are not allowed
-      errors.add_to_base "Sorry, login has been disabled for your account"
-      return
+    if user
+      # this is the field indicating if the user should be allowed to login
+      unless user.is_enabled
+        # user is not allowed to login, add an error telling the user they are not allowed
+        errors.add_to_base I18n.translate('access.disabled')
+        return
+      end
     end
 
     # user is allowed to login, call the normal base class method in
