@@ -45,7 +45,7 @@ class ApplicationController < ActionController::Base
     if current_user
       I18n.locale = current_user.language
     else
-      I18n.locale = "es"
+      I18n.locale = "en"
     end
   end
 
